@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <style>
+        *{
+            overflow: hidden;
+            padding: 0px;
+            margin: 0px;
+            
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          
+        }
+        .container1 {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("BeFunky-collage (1).jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: moveBackground 10s linear infinite alternate;
+}
+
+/* Background ko move karne ke liye */
+@keyframes moveBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0; /* left to right */
+    }
+}
+        
+        #box{
+            background-color: rgb(110, 109, 106);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: solid black 1px;
+            border-radius: 20px;
+            height: 45vh;
+            width: 30vw;
+            justify-content:space-around;
+        }
+        #info{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        input{
+            border: solid gainsboro 1px;
+            width: 200px;
+            height: 25px;
+            border-radius: 5px;
+            padding: 4px 5px;
+            transition: all 0.3s ease;  
+        }
+
+        input:focus {
+        border-color: #2196f3;
+        box-shadow: 0 0 8px rgba(35, 135, 218, 0.5);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <div class="container">
+        
+        <div id="box">
+            <div>
+                <div><h2>LOGIN</h2></div>
+            </div>
+            
+            <div id="info">
+                <div>
+                    <input type="text" id="Fristname" placeholder="Fristname">
+                </div>
+                <br>
+                <div>
+                    <input type="text" id="Lastname" placeholder="Lastname">
+                </div>
+                <br>
+                <div>
+                    <input type="email" id="email" placeholder="Email">
+                </div>
+                <br>
+                <div>
+                    <input type="password" placeholder="Password">
+                </div>
+                <br>
+                <div style="display: flex; justify-content:center;">
+                    <label for="button"></label>
+                    <button>Submit</button>
+                </div>
+            
+
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+</html>

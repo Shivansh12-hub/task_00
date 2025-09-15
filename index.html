@@ -1,111 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="logo.webp">
+    <link rel="icon" type="webp" href="logo.webp">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login page</title>
+    <title>Login Page</title>
     <style>
-        *{
-            overflow: hidden;
-            padding: 0px;
-            margin: 0px;
-            
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
         }
-        .container{
+
+        .container1 {
             height: 100vh;
             width: 100vw;
+            background-image: url("BeFunky-collage (1).jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            animation: moveBackground 8s linear  infinite alternate;
             display: flex;
             align-items: center;
             justify-content: center;
-          
         }
-        .container1 {
-    height: 100vh;
-    width: 100vw;
-    background-image: url("BeFunky-collage (1).jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    animation: moveBackground 10s linear infinite alternate;
-}
 
-/* Background ko move karne ke liye */
-@keyframes moveBackground {
-    from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: 100% 0; /* left to right */
-    }
-}
-        
-        #box{
-            background-color: rgb(110, 109, 106);
+        @keyframes moveBackground {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 100% 0;
+            }
+        }
+
+        #box {
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            border: solid black 1px;
             border-radius: 20px;
-            height: 45vh;
-            width: 30vw;
-            justify-content:space-around;
+            height: 420px;
+            width: 420px;
+            background: rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            padding: 25px;
+            transition: all 0.3s ease-in-out;
         }
-        #info{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
+
+        #box:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
         }
-        input{
-            border: solid gainsboro 1px;
-            width: 200px;
-            height: 25px;
-            border-radius: 5px;
-            padding: 4px 5px;
-            transition: all 0.3s ease;  
+
+        h1 {
+            color: #ffffff;
+            letter-spacing: 2px;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        input {
+            border: none;
+            width: 260px;
+            height: 38px;
+            border-radius: 8px;
+            padding: 6px 12px;
+            font-size: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            outline: none;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+
+        input::placeholder {
+            color: #ffffff;
         }
 
         input:focus {
-        border-color: #2196f3;
-        box-shadow: 0 0 8px rgba(35, 135, 218, 0.5);
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid #00c6ff;
+            box-shadow: 0 0 8px #00c6ff;
         }
 
+        button {
+            height: 40px;
+            width: 120px;
+            border-radius: 25px;
+            border: none;
+            background: linear-gradient(#00c6ff);
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 198, 255, 0.6);
+        }
+
+        @media (max-width: 768px) {
+            #box {
+                padding: 10px;
+                width: 100%;
+                height: auto;
+                margin: 20px;
+            }
+            input {
+                width: 90%;
+            }
+            .g-recaptcha{
+                width: 90%;
+                height: auto;
+                padding: 20px;            }
+        }
+        
+        
     </style>
 </head>
 <body>
     <div class="container1">
-        <div class="container">
-        
         <div id="box">
-            <div>
-                <div><h2>LOGIN</h2></div>
-            </div>
-            
-            <div id="info">
-                <div>
-                    <input type="text" id="Fristname" placeholder="Fristname">
-                </div>
-                <br>
-                <div>
-                    <input type="text" id="Lastname" placeholder="Lastname">
-                </div>
-                <br>
-                <div>
-                    <input type="email" id="email" placeholder="Email">
-                </div>
-                <br>
-                <div>
-                    <input type="password" placeholder="Password">
-                </div>
-                <br>
-                <div style="display: flex; justify-content:center;">
-                    <label for="button"></label>
-                    <button>Submit</button>
-                </div>
-            
+            <h1>LOGIN</h1>
 
+            <input type="text" id="Fristname" placeholder="First Name" required />
+            <input type="text" id="Lastname" placeholder="Last Name" required />
+            <input type="email" id="email" placeholder="Email" required />
+            <input type="password" placeholder="Password" required />
+
+            <div class="g-recaptcha" data-sitekey="6LeiMskrAAAAALFxATUHgZoXzkHpcJgGELVo03Hs"></div>
+            <br>
+            <a href="page_2.html" target="_blank">
+                <button>Submit</button>
+            </a>
         </div>
     </div>
-    </div>
-    </div>
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 </html>

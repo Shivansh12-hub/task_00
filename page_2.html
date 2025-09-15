@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="webp" href="logo.webp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music</title>
+    <style>
+      * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  background: linear-gradient(135deg, #0f0f0f, #1a1a2e);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  height: auto;
+  width: 60vw;
+  background: #1e1e2e;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+  color: #ffcc70;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#horizontal {
+  width: 100%;
+  border: none;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  margin: 10px 0;
+}
+
+#type {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#kk {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+input {
+  width: 22px;
+  height: 22px;
+  accent-color: #4b2adf;
+  cursor: pointer;
+}
+
+label {
+  font-size: 18px;
+  color: #e0e0e0;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+label:hover {
+  color: #ffcc70;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div id="content">
+          <h1>Love to listen</h1>
+
+          <div id="horizontal"></div>
+
+          <div id="type">
+            <div id="kk">
+              <input type="checkbox" />
+              <label for="classical">Classical</label>
+            </div>
+
+            <div id="horizontal"></div>
+
+            <div id="kk">
+              <input type="checkbox" />
+              <label for="pop">Pop</label>
+            </div>
+
+            <div id="horizontal"></div>
+
+            <div id="kk">
+              <input type="checkbox" />
+              <label for="lofi">Lofi</label>
+            </div>
+
+            <div id="horizontal"></div>
+
+            <div id="kk">
+              <input type="checkbox" />
+              <label for="rock">Rock</label>
+            </div>
+
+            <div id="horizontal"></div>
+
+            <div id="kk">
+              <input type="checkbox" />
+              <label for="metal">Metal</label>
+            </div>
+
+            <div id="horizontal"></div>
+
+            <div id="kk">
+              <input type="checkbox" />
+              <label for="hip-hop">Hip-Hop</label>
+            </div>
+
+            <div id="horizontal"></div>
+
+            <div id="kk">
+              <input type="checkbox" />
+              <label for="religious">religious</label>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
